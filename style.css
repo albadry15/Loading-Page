@@ -1,0 +1,40 @@
+body {
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 flex-direction: column;
+	 gap: 50px;
+	 height: 100vh;
+	 background-color: #000;
+}
+ body .text {
+	 color: #026c7c;
+	 font-family: sans-serif;
+	 font-size: 2em;
+}
+ body .loader {
+	 position: relative;
+	 height: 4px;
+	 width: 25%;
+	 background-color: #222;
+	 border-radius: 50px;
+	 overflow: hidden;
+}
+ body .loader::before {
+	 content: '';
+	 position: absolute;
+	 top: 0;
+	 background-color: #026c7c;
+	 height: 100%;
+	 width: 100%;
+	 animation: load 1s infinite;
+}
+ @keyframes load {
+	 0%, 100% {
+		 left: -75%;
+	}
+	 50% {
+		 left: 75%;
+	}
+}
+ 
